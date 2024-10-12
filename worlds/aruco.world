@@ -1,0 +1,2041 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    
+    
+
+
+    <model name='marker1'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker1/meshes/marker1.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker2'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker2/meshes/marker2.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker3'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker3/meshes/marker3.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker4'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker4/meshes/marker4.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker5'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker5/meshes/marker5.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker6'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker6/meshes/marker6.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker7'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker7/meshes/marker7.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker8'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker8/meshes/marker8.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker9'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker9/meshes/marker9.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker10'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker10/meshes/marker10.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>0  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker11'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker11/meshes/marker11.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker12'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker12/meshes/marker12.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker13'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker13/meshes/marker13.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker14'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker14/meshes/marker14.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker15'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker15/meshes/marker15.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker16'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker16/meshes/marker16.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker17'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker17/meshes/marker17.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker18'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker18/meshes/marker18.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker19'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker19/meshes/marker19.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker20'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker20/meshes/marker20.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>1  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker21'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker21/meshes/marker21.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker22'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker22/meshes/marker22.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker23'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker23/meshes/marker23.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker24'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker24/meshes/marker24.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker25'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker25/meshes/marker25.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker26'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker26/meshes/marker26.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker27'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker27/meshes/marker27.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker28'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker28/meshes/marker28.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker29'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker29/meshes/marker29.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker30'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker30/meshes/marker30.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>2  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker31'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker31/meshes/marker31.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker32'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker32/meshes/marker32.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker33'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker33/meshes/marker33.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker34'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker34/meshes/marker34.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker35'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker35/meshes/marker35.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker36'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker36/meshes/marker36.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker37'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker37/meshes/marker37.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker38'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker38/meshes/marker38.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker39'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker39/meshes/marker39.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker40'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker40/meshes/marker40.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>3  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker41'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker41/meshes/marker41.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker42'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker42/meshes/marker42.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker43'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker43/meshes/marker43.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker44'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker44/meshes/marker44.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker45'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker45/meshes/marker45.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker46'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker46/meshes/marker46.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker47'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker47/meshes/marker47.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker48'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker48/meshes/marker48.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker49'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker49/meshes/marker49.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker50'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker50/meshes/marker50.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>4  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker51'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker51/meshes/marker51.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker52'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker52/meshes/marker52.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker53'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker53/meshes/marker53.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker54'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker54/meshes/marker54.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker55'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker55/meshes/marker55.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker56'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker56/meshes/marker56.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker57'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker57/meshes/marker57.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker58'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker58/meshes/marker58.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker59'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker59/meshes/marker59.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker60'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker60/meshes/marker60.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>5  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker61'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker61/meshes/marker61.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker62'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker62/meshes/marker62.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker63'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker63/meshes/marker63.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker64'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker64/meshes/marker64.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker65'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker65/meshes/marker65.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker66'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker66/meshes/marker66.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker67'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker67/meshes/marker67.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker68'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker68/meshes/marker68.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker69'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker69/meshes/marker69.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker70'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker70/meshes/marker70.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>6  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker71'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker71/meshes/marker71.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker72'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker72/meshes/marker72.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker73'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker73/meshes/marker73.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker74'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker74/meshes/marker74.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker75'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker75/meshes/marker75.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker76'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker76/meshes/marker76.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker77'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker77/meshes/marker77.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker78'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker78/meshes/marker78.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker79'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker79/meshes/marker79.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker80'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker80/meshes/marker80.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>7  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker81'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker81/meshes/marker81.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker82'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker82/meshes/marker82.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker83'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker83/meshes/marker83.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker84'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker84/meshes/marker84.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker85'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker85/meshes/marker85.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker86'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker86/meshes/marker86.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker87'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker87/meshes/marker87.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker88'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker88/meshes/marker88.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker89'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker89/meshes/marker89.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker90'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker90/meshes/marker90.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>8  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker91'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker91/meshes/marker91.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  0 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker92'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker92/meshes/marker92.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  1 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker93'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker93/meshes/marker93.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  2 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker94'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker94/meshes/marker94.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  3 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker95'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker95/meshes/marker95.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  4 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker96'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker96/meshes/marker96.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  5 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker97'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker97/meshes/marker97.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  6 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker98'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker98/meshes/marker98.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  7 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker99'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker99/meshes/marker99.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  8 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+          
+     <model name='marker100'>
+      <static>1</static>
+      <link name='link'>
+       <visual name='visual'>
+       <geometry>
+        <mesh>
+         <uri>model://marker100/meshes/marker100.dae</uri>
+         <scale>0.244 0.244 0.244</scale>
+        </mesh>
+       </geometry>
+       </visual>
+       <self_collide>0</self_collide>
+       <enable_wind>0</enable_wind>
+       <kinematic>0</kinematic>
+      </link>
+      <pose>9  9 0 1.5707 -1.5707 1.5707</pose>
+     </model>
+          
+
+       
+
+
+
+
+
+
+ 
+
+    
+
+
+
+    <state world_name='default'>
+      <sim_time>645 491000000</sim_time>
+      <real_time>651 256764384</real_time>
+      <wall_time>1698344970 91675497</wall_time>
+      <iterations>645491</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+
+
+
+
+
+     
+
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>7.97401 1.66068 4.47144 0 0.731643 3.08737</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
